@@ -100,6 +100,22 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,3vw,2.4rem)
 .sobre{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .sobre figure img{aspect-ratio:4/3;object-fit:cover;filter:saturate(.92)}
 .sobre figcaption{font-size:.82rem;color:var(--texto-fraco);margin-top:10px}
+.equipe{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.rede{margin:0;background:var(--tinta);border:1px solid rgba(194,155,74,.45);outline:1px solid rgba(194,155,74,.18);outline-offset:-12px;padding:26px 26px 24px}
+.rede-mapa{position:relative;max-width:440px;margin:0 auto}
+.rede-mapa img{width:100%;height:auto;display:block}
+.rede-mapa svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.rede-linhas path{fill:none;stroke:#F3DFA9;stroke-width:1.6;stroke-linecap:round;opacity:.85;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s ease calc(.5s + var(--i)*.14s)}
+.rede-pontos circle{fill:#FFF3CF;stroke:rgba(255,243,207,.35);stroke-width:8;opacity:0;transform-box:fill-box;transform-origin:center;transition:opacity .4s ease calc(1.3s + var(--i)*.14s)}
+.rede-centro{fill:#fff;stroke:rgba(243,223,169,.45);stroke-width:12;transform-box:fill-box;transform-origin:center}
+.visivel .rede-linhas path{stroke-dashoffset:0}
+.visivel .rede-pontos circle{opacity:1;animation:rede-pulso 2.6s ease-in-out calc(1.8s + var(--i)*.2s) infinite}
+.visivel .rede-centro{animation:rede-pulso 2.6s ease-in-out infinite}
+@keyframes rede-pulso{0%,100%{transform:scale(1)}50%{transform:scale(1.45)}}
+.rede figcaption{margin-top:14px;text-align:center;color:var(--texto-claro)}
+.rede figcaption strong{display:block;font-family:var(--display);font-weight:400;font-size:clamp(.98rem,4.3vw,1.25rem);letter-spacing:.02em;color:#F8F3E9}
+.rede figcaption span{display:block;font-style:italic;font-size:.98rem;color:var(--ouro-claro);margin-top:4px}
+@media (prefers-reduced-motion:reduce){.rede-linhas path{stroke-dashoffset:0;transition:none}.rede-pontos circle{opacity:1;transition:none;animation:none!important}.rede-centro{animation:none!important}}
 .marcas{list-style:none;margin-top:30px;border-top:1px solid rgba(43,38,32,.18)}
 .marcas li{display:grid;grid-template-columns:38px 1fr;column-gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(43,38,32,.18)}
 .marcas .ico{width:26px;height:26px;color:var(--ouro-fundo)}
@@ -166,7 +182,7 @@ footer .nota{margin-top:26px;padding-top:20px;border-top:1px solid rgba(231,224,
 .barra-celular a{display:block;text-align:center;background:var(--ouro);color:#17130C;text-decoration:none;font-family:var(--display);padding:13px;letter-spacing:.04em}
 
 @media(max-width:860px){
- .sobre,.onde .grade,.duplas{grid-template-columns:1fr;gap:34px}
+ .sobre,.equipe,.onde .grade,.duplas{grid-template-columns:1fr;gap:34px}
  .indice{grid-template-columns:1fr}
  .destaques{grid-template-columns:1fr 1fr}
  .hero{padding:130px 0 70px}
@@ -247,7 +263,7 @@ footer .nota{margin-top:26px;padding-top:20px;border-top:1px solid rgba(231,224,
       <div class="hero" id="inicio">
         <h1 class="surge"><span>Advogados 24 horas</span> <span>Casos de alta complexidade</span> <span>Atuação em todo o Brasil</span></h1>
         <div class="linha" aria-hidden="true"></div>
-        <p class="surge d1">Assessoria consultiva, preventiva e contenciosa, inclusive em demandas de alta complexidade. Atendimento emergencial 24 horas.</p>
+        <p class="surge d1">Atuação jurídica estratégica em casos complexos nas áreas criminal, familiar, empresarial, agrária, imobiliária e patrimonial, com rigor técnico, sigilo profissional e atendimento personalizado.</p>
         <div class="acoes surge d2">
           <a class="botao" href="https://wa.me/5511920048151" target="_blank" rel="noopener">Falar no WhatsApp</a>
           <a class="botao vazio" href="#areas">Ver áreas de atuação</a>
@@ -294,7 +310,33 @@ footer .nota{margin-top:26px;padding-top:20px;border-top:1px solid rgba(231,224,
       <ul class="marcas">
         <li><svg class="ico" aria-hidden="true"><use href="#i-relogio"/></svg><div><strong>24 horas</strong><span>todos os dias, inclusive fins de semana</span></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-internacional"/></svg><div><strong>Todo o Brasil</strong><span>26 estados e o Distrito Federal</span></div></li>
-        <li><svg class="ico" aria-hidden="true"><use href="#i-lista"/></svg><div><strong>19 áreas</strong><span>cada uma com advogado dedicado</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-lista"/></svg><div><strong>19 áreas</strong><span>atendimento em todo o Brasil</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="equipe">
+  <div class="container equipe" data-revelar>
+    <figure class="rede">
+      <div class="rede-mapa">
+        <img src="img/mapa-brasil.jpg" alt="Mapa do Brasil com as cidades atendidas pelo grupo ligadas entre si" width="660" height="730" loading="lazy">
+        <svg viewBox="0 0 660 730" aria-hidden="true">
+          <g class="rede-linhas"><path d="M454 522Q483 527 509 512" pathLength="1" style="--i:0"/><path d="M454 522Q487 498 498 459" pathLength="1" style="--i:1"/><path d="M454 522Q468 451 433 388" pathLength="1" style="--i:2"/><path d="M454 522Q552 454 585 339" pathLength="1" style="--i:3"/><path d="M454 522Q590 418 628 252" pathLength="1" style="--i:4"/><path d="M454 522Q582 373 585 177" pathLength="1" style="--i:5"/><path d="M454 522Q508 324 423 137" pathLength="1" style="--i:6"/><path d="M454 522Q410 305 237 166" pathLength="1" style="--i:7"/><path d="M454 522Q360 344 174 266" pathLength="1" style="--i:8"/><path d="M454 522Q402 425 300 384" pathLength="1" style="--i:9"/><path d="M454 522Q426 531 410 555" pathLength="1" style="--i:10"/><path d="M454 522Q396 566 379 636" pathLength="1" style="--i:11"/></g>
+          <g class="rede-pontos"><circle cx="509" cy="512" r="5" style="--i:0"/><circle cx="498" cy="459" r="5" style="--i:1"/><circle cx="433" cy="388" r="5" style="--i:2"/><circle cx="585" cy="339" r="5" style="--i:3"/><circle cx="628" cy="252" r="5" style="--i:4"/><circle cx="585" cy="177" r="5" style="--i:5"/><circle cx="423" cy="137" r="5" style="--i:6"/><circle cx="237" cy="166" r="5" style="--i:7"/><circle cx="174" cy="266" r="5" style="--i:8"/><circle cx="300" cy="384" r="5" style="--i:9"/><circle cx="410" cy="555" r="5" style="--i:10"/><circle cx="379" cy="636" r="5" style="--i:11"/></g>
+          <circle class="rede-centro" cx="454" cy="522" r="8"/>
+        </svg>
+      </div>
+      <figcaption><strong>Temos escritórios em todo o Brasil</strong><span>Atendimento próximo de você</span></figcaption>
+    </figure>
+    <div>
+      <p class="rotulo">Nossa equipe</p>
+      <h2>Advogados perto de você, em todo o Brasil</h2>
+      <p>Contamos com uma rede de advogados correspondentes em todo o Brasil e uma plataforma própria de gestão de diligências jurídicas, possibilitando atendimento presencial e acompanhamento de demandas em diferentes regiões do país.</p>
+      <ul class="marcas">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-internacional"/></svg><div><strong>Rede de correspondentes</strong><span>advogados em todo o Brasil</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-acompanha"/></svg><div><strong>Plataforma própria</strong><span>gestão das diligências jurídicas</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><div><strong>Atendimento presencial</strong><span>em diferentes regiões do país</span></div></li>
       </ul>
     </div>
   </div>
@@ -304,8 +346,8 @@ footer .nota{margin-top:26px;padding-top:20px;border-top:1px solid rgba(231,224,
   <div class="container" data-revelar>
     <p class="rotulo">Áreas de atuação</p>
     <div class="intro">
-      <h2>Dezenove áreas do direito</h2>
-      <p>A primeira conversa pelo WhatsApp indica o caminho.</p>
+      <h2>Soluções jurídicas para diferentes necessidades</h2>
+      <p>Assessoria, consultoria e representação jurídica de pessoas físicas e jurídicas, nas esferas judicial e extrajudicial.</p>
     </div>
     <div class="indice">
       <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-penal"/></svg><div><h3>Direito Penal</h3><p>Defesa criminal e tribunais superiores.</p></div></div>
