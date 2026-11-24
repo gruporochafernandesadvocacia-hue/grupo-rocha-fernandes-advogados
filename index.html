@@ -2,110 +2,509 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grupo Rocha Fernandes Advogados | Advocacia em Todo o Brasil</title>
-<meta name="description" content="Grupo Rocha Fernandes Advogados. Atendimento jurídico 24 horas em todo o Brasil. Direito Penal, Civil, Família, Empresarial, Agrário e demais áreas jurídicas.">
-<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advogados em São Paulo e em todo o Brasil | Grupo Rocha Fernandes</title>
+<meta name="description" content="Escritório de advocacia em Santo Amaro, São Paulo, com atuação em todo o Brasil. Penal, família, agrário, imobiliário, empresarial, tributário e outras áreas. Atendimento 24 horas.">
+<link rel="canonical" href="https://gruporochafernandesadvocacia-hue.github.io/grupo-rocha-fernandes-advogados/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Grupo Rocha Fernandes Advogados">
+<meta property="og:description" content="Advocacia consultiva, preventiva e contenciosa, em todo o Brasil. Base em Santo Amaro, São Paulo. Atendimento 24 horas.">
+<meta property="og:image" content="https://gruporochafernandesadvocacia-hue.github.io/grupo-rocha-fernandes-advogados/img/sala-de-reuniao.jpg">
+<meta property="og:url" content="https://gruporochafernandesadvocacia-hue.github.io/grupo-rocha-fernandes-advogados/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
+:root{
+  --tinta:#12100D;
+  --tinta-2:#1C1813;
+  --papel:#F4EFE6;
+  --papel-2:#EAE2D3;
+  --ouro:#C29B4A;
+  --ouro-claro:#DCC08A;
+  --ouro-fundo:#9A7526;
+  --texto:#2B2620;
+  --texto-fraco:#6B6254;
+  --texto-claro:#E7E0D3;
+  --texto-claro-fraco:#B9B0A1;
+  --serif:"Lora",Georgia,serif;
+  --display:"Marcellus","Times New Roman",serif;
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#f5f5f5;color:#252525;line-height:1.7}
-header{background:#101820;color:white;text-align:center;padding:50px 20px;border-bottom:4px solid #b89555}
-header h1{font-size:30px;margin-bottom:12px}
-header p{color:#d9bd87;font-size:18px}
-.container{max-width:1150px;margin:auto;padding:30px 20px}
-.intro{text-align:center;padding:30px 15px}
-.intro h2{color:#17232e;margin-bottom:15px}
-.intro p{max-width:850px;margin:auto}
-.areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px}
-.area{background:white;padding:25px;border-radius:6px;border-top:3px solid #b89555;box-shadow:0 3px 12px rgba(0,0,0,.06)}
-.area h3{color:#17232e;font-size:18px;margin-bottom:14px}
-.area ul{padding-left:20px}
-.area li{margin-bottom:7px;font-size:14px}
-.botao{display:inline-block;background:#b89555;color:white;padding:13px 25px;border-radius:5px;text-decoration:none;font-weight:bold;margin-top:15px}
-.botao:hover{background:#92733d}
-.destaque{background:#17232e;color:white;text-align:center;padding:45px 20px;margin-top:40px}
-.destaque h2{color:#d9bd87;margin-bottom:12px}
-footer{background:#101820;color:#ddd;text-align:center;padding:25px 15px;font-size:13px}
-footer strong{color:#d9bd87}
-@media(max-width:600px){header h1{font-size:23px}.area{padding:20px}}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:var(--serif);color:var(--texto);background:var(--papel);line-height:1.7;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+.pular{position:absolute;left:-9999px;top:0;background:var(--ouro);color:#17130C;padding:12px 18px;z-index:100}
+.pular:focus{left:12px;top:12px}
+.container{max-width:1120px;margin:0 auto;padding:0 28px}
+
+.ico{width:22px;height:22px;flex:none;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+
+.cabeca{position:fixed;inset:0 0 auto;z-index:40;transition:background .35s,box-shadow .35s}
+.cabeca .container{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-top:20px;padding-bottom:20px;transition:padding .35s}
+.cabeca .marca{display:flex;align-items:center;gap:12px;color:var(--ouro-claro);text-decoration:none;font-family:var(--display);letter-spacing:.06em;font-size:.98rem}
+.cabeca .marca svg{width:30px;height:30px;flex:none}
+.cabeca .tel{color:var(--texto-claro);text-decoration:none;white-space:nowrap;font-family:var(--display);letter-spacing:.05em;font-size:.95rem}
+.cabeca .tel:hover{color:var(--ouro-claro)}
+.cabeca.compacta{background:rgba(18,16,13,.95);box-shadow:0 1px 0 rgba(194,155,74,.25)}
+.cabeca.compacta .container{padding-top:12px;padding-bottom:12px}
+
+.topo{position:relative;background:var(--tinta);color:var(--texto-claro);overflow:hidden}
+.topo::before{content:"";position:absolute;inset:0;background:url("img/sala-de-reuniao.jpg") 100% 42%/cover no-repeat;opacity:.62;transform:scale(1.04);transition:transform 8s ease-out}
+body.pronto .topo::before{transform:scale(1)}
+.topo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,16,13,.9) 0%,rgba(18,16,13,.62) 42%,rgba(18,16,13,.06) 82%),linear-gradient(180deg,rgba(18,16,13,.55) 0%,rgba(18,16,13,.1) 45%,rgba(18,16,13,.95) 100%)}
+.topo .conteudo{position:relative;z-index:1}
+.hero{padding:150px 0 92px;max-width:780px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.3rem,5vw,3.9rem);line-height:1.08;letter-spacing:.01em;color:#F8F3E9}
+.hero .linha{width:64px;height:2px;background:var(--ouro);margin:26px 0;transform-origin:left;transform:scaleX(0);transition:transform .9s .35s ease}
+body.pronto .hero .linha{transform:scaleX(1)}
+.hero p{font-size:1.12rem;color:var(--texto-claro);max-width:54ch}
+.acoes{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:32px}
+.botao{display:inline-block;background:var(--ouro);color:#17130C;text-decoration:none;font-family:var(--display);letter-spacing:.04em;padding:15px 26px;font-size:1rem;border:1px solid var(--ouro);transition:background .2s,color .2s,transform .2s}
+.botao:hover{background:var(--ouro-claro);transform:translateY(-1px)}
+.botao.vazio{background:transparent;color:var(--ouro-claro)}
+.botao.vazio:hover{background:rgba(194,155,74,.14)}
+.surge{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+body.pronto .surge{opacity:1;transform:none}
+.surge.d1{transition-delay:.12s}
+.surge.d2{transition-delay:.24s}
+
+.faixa{background:var(--tinta-2);color:var(--texto-claro-fraco);border-top:1px solid rgba(194,155,74,.35)}
+.faixa .container{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:18px 28px;font-size:.92rem;letter-spacing:.02em}
+.faixa strong{color:var(--texto-claro);font-weight:600}
+
+.secao{padding:88px 0}
+[data-revelar]{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+[data-revelar].visivel{opacity:1;transform:none}
+.rotulo{display:flex;align-items:center;gap:14px;font-family:var(--display);letter-spacing:.08em;font-size:.92rem;color:var(--ouro-fundo);margin-bottom:14px}
+.rotulo::after{content:"";flex:1;height:1px;background:rgba(154,117,38,.4);transform:scaleX(0);transform-origin:left;transition:transform 1s ease}
+[data-revelar].visivel .rotulo::after{transform:scaleX(1)}
+.onde .rotulo{color:var(--ouro)}
+.onde .rotulo::after{background:rgba(194,155,74,.35)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,3vw,2.4rem);line-height:1.2;margin-bottom:16px;color:var(--tinta)}
+
+.destaques{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(43,38,32,.16);border-top:1px solid rgba(43,38,32,.16);border-bottom:1px solid rgba(43,38,32,.16);margin-top:40px}
+.destaque-1{background:var(--papel);padding:28px 26px;position:relative;overflow:hidden}
+.destaque-1::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--ouro);transform:scaleY(0);transform-origin:top;transition:transform .45s ease}
+.destaque-1:hover::before{transform:scaleY(1)}
+.destaque-1 .ico{display:block;width:30px;height:30px;color:var(--ouro-fundo);margin-bottom:12px}
+.destaque-1 h3{font-family:var(--display);font-weight:400;font-size:1.2rem;color:var(--tinta)}
+.destaque-1 p{font-size:.94rem;color:var(--texto-fraco);margin-top:4px}
+.destaque-1 a{position:absolute;inset:0;font-size:0;color:transparent}
+
+.sobre{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.sobre figure img{aspect-ratio:4/3;object-fit:cover;filter:saturate(.92)}
+.sobre figcaption{font-size:.82rem;color:var(--texto-fraco);margin-top:10px}
+.marcas{list-style:none;margin-top:30px;border-top:1px solid rgba(43,38,32,.18)}
+.marcas li{display:grid;grid-template-columns:38px 1fr;column-gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(43,38,32,.18)}
+.marcas .ico{width:26px;height:26px;color:var(--ouro-fundo)}
+.marcas strong{display:block;font-family:var(--display);font-weight:400;font-size:1.05rem;color:var(--tinta)}
+.marcas span{font-size:.9rem;color:var(--texto-fraco)}
+
+.areas{background:var(--papel-2);border-top:1px solid rgba(43,38,32,.12);border-bottom:1px solid rgba(43,38,32,.12)}
+.areas .intro{max-width:58ch;margin-bottom:40px}
+.indice{display:grid;grid-template-columns:1fr 1fr;column-gap:64px}
+.indice .item{display:grid;grid-template-columns:26px 1fr;column-gap:14px;align-items:start;padding:16px 0;border-top:1px solid rgba(43,38,32,.18);transition:padding-left .25s ease}
+.indice .item:hover{padding-left:6px}
+.indice .ico{width:22px;height:22px;color:var(--ouro-fundo);margin-top:4px}
+.indice h3{font-family:var(--display);font-weight:400;font-size:1.08rem;color:var(--tinta);line-height:1.3}
+.indice p{font-size:.92rem;color:var(--texto-fraco)}
+
+.rota{position:relative;margin-top:44px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.rota .fio{position:absolute;left:0;right:0;top:27px;width:100%;height:2px;overflow:visible;pointer-events:none}
+.rota .fio path{fill:none;stroke:rgba(154,117,38,.45);stroke-width:1;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s ease .3s}
+[data-revelar].visivel .rota .fio path{stroke-dashoffset:0}
+.passo .no{width:54px;height:54px;border-radius:50%;border:1px solid rgba(154,117,38,.6);background:var(--papel);display:grid;place-items:center;color:var(--ouro-fundo);margin-bottom:18px}
+.passo .no .ico{width:26px;height:26px}
+.passo h3{font-family:var(--display);font-weight:400;font-size:1.15rem;margin-bottom:6px}
+.passo p{font-size:.95rem;color:var(--texto-fraco)}
+
+.onde{background:var(--tinta);color:var(--texto-claro)}
+.onde .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.onde h2{color:#F8F3E9}
+.onde .endereco{font-size:1.06rem;line-height:1.9}
+.onde .endereco a{color:var(--ouro-claro);text-decoration:none}
+.onde iframe{width:100%;aspect-ratio:16/10;border:1px solid rgba(194,155,74,.35);filter:grayscale(1) contrast(.96) opacity(.88)}
+
+.duplas{display:grid;grid-template-columns:1.12fr .88fr;gap:64px;align-items:start}
+.duvidas details{border-top:1px solid rgba(43,38,32,.18);padding:18px 0}
+.duvidas details:last-of-type{border-bottom:1px solid rgba(43,38,32,.18)}
+.duvidas summary{font-family:var(--display);font-size:1.1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;align-items:baseline}
+.duvidas summary::-webkit-details-marker{display:none}
+.duvidas summary::after{content:"+";color:var(--ouro-fundo);font-size:1.3rem;line-height:1}
+.duvidas details[open] summary::after{content:"–"}
+.duvidas p{margin-top:10px;max-width:60ch;color:var(--texto-fraco);font-size:.98rem}
+
+.cartao{background:var(--tinta);color:var(--texto-claro);padding:34px 30px;border-top:2px solid var(--ouro)}
+.cartao .rotulo{color:var(--ouro-claro);margin-bottom:8px}
+.cartao .rotulo::after{background:rgba(194,155,74,.35)}
+.cartao h3{font-family:var(--display);font-weight:400;font-size:1.25rem;color:#F8F3E9;margin-bottom:16px}
+.cartao ul{list-style:none}
+.cartao li{display:grid;grid-template-columns:24px 1fr;column-gap:12px;align-items:start;padding:9px 0;border-top:1px solid rgba(231,224,211,.12);font-size:.95rem;color:var(--texto-claro)}
+.cartao li .ico{width:18px;height:18px;color:var(--ouro);margin-top:3px}
+.cartao .botao{margin-top:22px;width:100%;text-align:center}
+.cartao .nota{font-size:.82rem;color:var(--texto-claro-fraco);margin-top:12px}
+
+.plantao{background:var(--ouro);color:#17130C;text-align:center;padding:60px 20px}
+.plantao h2{color:#17130C;margin-bottom:10px}
+.plantao p{max-width:52ch;margin:0 auto 24px}
+.plantao .botao{background:#17130C;color:var(--ouro-claro);border-color:#17130C}
+.plantao .botao:hover{background:#2A2418}
+
+footer{background:var(--tinta);color:var(--texto-claro-fraco);padding:46px 0 90px;font-size:.9rem}
+footer .container{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}
+footer strong{color:var(--texto-claro);font-family:var(--display);font-weight:400;letter-spacing:.05em}
+footer .nota{margin-top:26px;padding-top:20px;border-top:1px solid rgba(231,224,211,.14);font-size:.8rem;line-height:1.6;grid-column:1/-1}
+
+.barra-celular{position:fixed;left:0;right:0;bottom:0;z-index:45;display:none;background:rgba(18,16,13,.96);border-top:1px solid rgba(194,155,74,.4);padding:10px 14px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .35s ease}
+.barra-celular.visivel{transform:none}
+.barra-celular a{display:block;text-align:center;background:var(--ouro);color:#17130C;text-decoration:none;font-family:var(--display);padding:13px;letter-spacing:.04em}
+
+@media(max-width:860px){
+ .sobre,.onde .grade,.duplas{grid-template-columns:1fr;gap:34px}
+ .indice{grid-template-columns:1fr}
+ .destaques{grid-template-columns:1fr 1fr}
+ .hero{padding:130px 0 70px}
+ .barra-celular{display:block}
+ .secao{padding:64px 0}
+ .rota{display:block;padding-left:0}
+ .rota .fio{display:none}
+ .rota::before{content:none}
+ .passo{position:relative;display:grid;grid-template-columns:54px 1fr;column-gap:20px;align-items:start;margin-bottom:28px}
+ .passo:not(:last-child)::after{content:"";position:absolute;left:26.5px;top:56px;bottom:-28px;width:1px;background:rgba(154,117,38,.4)}
+ .passo .no{margin-bottom:0}
+}
+@media(max-width:560px){
+ .destaques{grid-template-columns:1fr}
+ .marcas li{grid-template-columns:34px 1fr}
+ .acoes{gap:10px}
+ .acoes .botao{width:100%;text-align:center}
+ .cabeca .marca{font-size:.84rem;gap:9px}
+ .cabeca .marca svg{width:26px;height:26px}
+ .cabeca .tel{font-size:.8rem}
+ .faixa .container{font-size:.84rem;gap:6px;padding:14px 20px}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *{transition:none!important;animation:none!important}
+ [data-revelar],.surge{opacity:1;transform:none}
+ .topo::before{transform:none}
+ .rota .fio path{stroke-dashoffset:0}
+}
 </style>
 </head>
 <body>
-<header>
-<h1>GRUPO ROCHA FERNANDES ADVOGADOS</h1>
-<p>Atendimento jurídico 24 horas em todo o Brasil</p>
-<a class="botao" href="https://wa.me/5511920048151" target="_blank" rel="noopener">Fale pelo WhatsApp</a>
+<a class="pular" href="#conteudo">Ir direto para o conteúdo</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-penal" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V6z"/></symbol>
+    <symbol id="i-execucao" viewBox="0 0 24 24"><circle cx="8" cy="8" r="3.5"/><path d="M10.6 10.6L20 20M16.5 16.5l2-2M13.6 13.6l2-2"/></symbol>
+    <symbol id="i-agrario" viewBox="0 0 24 24"><path d="M12 21v-7M12 14c0-3.5 2.6-6 6.5-6 0 3.5-2.6 6-6.5 6zM12 14c0-2.8-2.2-5-5.5-5 0 2.8 2.2 5 5.5 5z"/></symbol>
+    <symbol id="i-imobiliario" viewBox="0 0 24 24"><path d="M4 11l8-7 8 7M6.5 9.8V20h11V9.8M10 20v-5h4v5"/></symbol>
+    <symbol id="i-familia" viewBox="0 0 24 24"><path d="M12 20s-7.2-4.3-7.2-9.1A3.9 3.9 0 0 1 12 8.7a3.9 3.9 0 0 1 7.2 2.2C19.2 15.7 12 20 12 20z"/></symbol>
+    <symbol id="i-empresarial" viewBox="0 0 24 24"><path d="M4 21V6.5L11 3v18M11 21h9V10.5L11 7M7 9h1.5M7 12.5h1.5M7 16h1.5M15 13h1.5M15 17h1.5"/></symbol>
+    <symbol id="i-tributario" viewBox="0 0 24 24"><circle cx="8" cy="8" r="2.2"/><circle cx="16" cy="16" r="2.2"/><path d="M18.5 5.5L5.5 18.5"/></symbol>
+    <symbol id="i-digital" viewBox="0 0 24 24"><path d="M3 9a13 13 0 0 1 18 0M6.4 12.6a8.6 8.6 0 0 1 11.2 0M9.9 16.2a4 4 0 0 1 4.2 0"/><circle cx="12" cy="19.5" r="1"/></symbol>
+    <symbol id="i-ambiental" viewBox="0 0 24 24"><path d="M3 19l6.5-10 4 6 2.5-3.5L21 19z"/><circle cx="16.5" cy="6" r="2"/></symbol>
+    <symbol id="i-administrativo" viewBox="0 0 24 24"><path d="M3 20h18M12 3l9 5H3zM5.5 10.5V20M10 10.5V20M14 10.5V20M18.5 10.5V20"/></symbol>
+    <symbol id="i-eleitoral" viewBox="0 0 24 24"><path d="M4 10h16v10H4zM8 10V5.5h8V10M9 15l2.2 2.2L15.5 13"/></symbol>
+    <symbol id="i-internacional" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18 14 14 0 0 1 0-18z"/></symbol>
+    <symbol id="i-medico" viewBox="0 0 24 24"><path d="M9 3.5h6V9h5.5v6H15v5.5H9V15H3.5V9H9z"/></symbol>
+    <symbol id="i-desportivo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.2l4.3 3.1-1.6 5.1H9.3L7.7 10.3z"/></symbol>
+    <symbol id="i-militar" viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></symbol>
+    <symbol id="i-civil" viewBox="0 0 24 24"><path d="M7 3h7l4 4v14H7zM14 3v4h4M10 12h5M10 16h5"/></symbol>
+    <symbol id="i-trabalhista" viewBox="0 0 24 24"><path d="M3.5 8.5h17V19h-17zM9 8.5V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2.5M3.5 13h17"/></symbol>
+    <symbol id="i-previdenciario" viewBox="0 0 24 24"><path d="M4.5 6.5h15V20h-15zM4.5 10.5h15M8.5 4v4M15.5 4v4M8 14h2M14 14h2M8 17h2"/></symbol>
+    <symbol id="i-consumidor" viewBox="0 0 24 24"><path d="M5.5 8.5h13L17.5 20h-11zM9 8.5V6a3 3 0 0 1 6 0v2.5"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 4.5h16v11H9.5L4 20z"/><path d="M8 9h8M8 12h5"/></symbol>
+    <symbol id="i-analise" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l6 6"/></symbol>
+    <symbol id="i-acompanha" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V6zM9 12l2 2 4-4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="i-lista" viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></symbol>
+  </defs>
+</svg>
+
+<header class="cabeca" id="cabeca">
+  <div class="container">
+    <a class="marca" href="#inicio" aria-label="Grupo Rocha Fernandes Advogados, início">
+      <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 8v28M14 40h20M8 16h32M8 16l-5 10a6 6 0 0 0 10 0L8 16Zm32 0-5 10a6 6 0 0 0 10 0l-5-10Zm-16-8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" stroke="#DCC08A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Grupo Rocha Fernandes</span>
+    </a>
+    <a class="tel" href="tel:+5511920048151">(11) 92004-8151</a>
+  </div>
 </header>
-<section class="intro">
-<h2>ADVOCACIA ESPECIALIZADA</h2>
-<p>Atuação jurídica estratégica, técnica e sigilosa, com atendimento em todo o território nacional. Assessoria e representação jurídica em demandas complexas, urgentes e consultivas.</p>
+
+<div class="topo">
+  <div class="conteudo">
+    <div class="container">
+      <div class="hero" id="inicio">
+        <h1 class="surge">Advocacia em todo o Brasil, com escritório em São Paulo</h1>
+        <div class="linha" aria-hidden="true"></div>
+        <p class="surge d1">Assessoria consultiva, preventiva e contenciosa, inclusive em demandas de alta complexidade. Atendimento emergencial 24 horas.</p>
+        <div class="acoes surge d2">
+          <a class="botao" href="https://wa.me/5511920048151" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          <a class="botao vazio" href="#areas">Ver áreas de atuação</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="faixa">
+  <div class="container">
+    <span><strong>Rua Alexandre Dumas, 1711</strong> · Santo Amaro, São Paulo</span>
+    <span><strong>Atendimento 24 horas</strong> pelo WhatsApp (11) 92004-8151</span>
+  </div>
+</div>
+
+<main id="conteudo">
+
+<section class="secao" id="destaques">
+  <div class="container" data-revelar>
+    <p class="rotulo">Atuação</p>
+    <h2>As áreas que mais chegam ao escritório</h2>
+    <div class="destaques">
+      <div class="destaque-1"><svg class="ico" aria-hidden="true"><use href="#i-penal"/></svg><h3>Direito Penal</h3><p>Defesa criminal, júri e tribunais superiores.</p><a href="#areas">Ver área</a></div>
+      <div class="destaque-1"><svg class="ico" aria-hidden="true"><use href="#i-familia"/></svg><h3>Família</h3><p>Divórcio, guarda, alimentos e partilha.</p><a href="#areas">Ver área</a></div>
+      <div class="destaque-1"><svg class="ico" aria-hidden="true"><use href="#i-agrario"/></svg><h3>Agrário e Fundiário</h3><p>Imóveis rurais, usucapião e posse.</p><a href="#areas">Ver área</a></div>
+      <div class="destaque-1"><svg class="ico" aria-hidden="true"><use href="#i-imobiliario"/></svg><h3>Imobiliário</h3><p>Compra, venda, regularização e disputas.</p><a href="#areas">Ver área</a></div>
+      <div class="destaque-1"><svg class="ico" aria-hidden="true"><use href="#i-empresarial"/></svg><h3>Empresarial</h3><p>Contratos, sociedade e proteção patrimonial.</p><a href="#areas">Ver área</a></div>
+      <div class="destaque-1"><svg class="ico" aria-hidden="true"><use href="#i-execucao"/></svg><h3>Execução Penal</h3><p>Progressão, benefícios e direitos do condenado.</p><a href="#areas">Ver área</a></div>
+    </div>
+  </div>
 </section>
-<main class="container">
-<section class="areas">
-<div class="area"><h3>⚖️ DIREITO PENAL</h3><ul>
-<li>Direito Penal Comum</li><li>Direito Penal Econômico</li><li>Direito Penal Militar</li><li>Execução Penal</li><li>Tribunal do Júri</li><li>Criminologia</li><li>Prisões em flagrante</li><li>Audiências de custódia</li><li>Investigações criminais</li><li>Mandados e medidas urgentes</li>
-</ul></div>
-<div class="area"><h3>📜 DIREITO CIVIL</h3><ul>
-<li>Responsabilidade Civil</li><li>Direito Contratual</li><li>Direito das Obrigações</li><li>Direito das Coisas</li><li>Posse e Propriedade</li><li>Direito Sucessório</li><li>Herança</li>
-</ul></div>
-<div class="area"><h3>👨‍👩‍👧 DIREITO DE FAMÍLIA E SUCESSÕES</h3><ul>
-<li>Divórcio e Separação</li><li>Guarda e Visitas</li><li>Alimentos e Pensão</li><li>Inventário e Testamento</li><li>Adoção</li><li>União Estável</li>
-</ul></div>
-<div class="area"><h3>💼 DIREITO TRABALHISTA</h3><ul>
-<li>Reclamações Trabalhistas</li><li>Verbas Rescisórias</li><li>Assédio Moral ou Sexual</li><li>Contratos de Trabalho</li><li>Acidentes de Trabalho</li>
-</ul></div>
-<div class="area"><h3>🧓 DIREITO PREVIDENCIÁRIO</h3><ul>
-<li>Aposentadorias</li><li>Aposentadoria por Idade</li><li>Aposentadoria por Tempo de Contribuição</li><li>Aposentadoria por Incapacidade Permanente</li><li>Auxílio por Incapacidade Temporária</li><li>BPC/LOAS</li><li>Revisão de Benefícios</li><li>Pensão por Morte</li>
-</ul></div>
-<div class="area"><h3>🛒 DIREITO DO CONSUMIDOR</h3><ul>
-<li>Produtos Defeituosos</li><li>Propaganda Enganosa</li><li>Cancelamentos e Reembolsos</li><li>Negativação Indevida</li>
-</ul></div>
-<div class="area"><h3>🏢 DIREITO EMPRESARIAL</h3><ul>
-<li>Constituição de Empresas</li><li>Contratos Empresariais</li><li>Recuperação Judicial</li><li>Falência</li><li>Direito Societário</li>
-</ul></div>
-<div class="area"><h3>🧾 DIREITO TRIBUTÁRIO</h3><ul>
-<li>Impostos</li><li>Planejamento Tributário</li><li>Execuções Fiscais</li><li>Isenções e Compensações</li>
-</ul></div>
-<div class="area"><h3>🌐 DIREITO DIGITAL</h3><ul>
-<li>Crimes Virtuais</li><li>Golpes e Invasões</li><li>Privacidade e LGPD</li><li>Remoção de Conteúdo Ofensivo</li><li>Direito à Imagem</li>
-</ul></div>
-<div class="area"><h3>🌳 DIREITO AMBIENTAL</h3><ul>
-<li>Licenciamento Ambiental</li><li>Crimes Ambientais</li><li>Preservação de Áreas Protegidas</li><li>Responsabilidade Ambiental Empresarial</li>
-</ul></div>
-<div class="area"><h3>🌱 DIREITO AGRÁRIO E FUNDIÁRIO</h3><ul>
-<li>Regularização de Imóveis Rurais</li><li>Conflitos de Posse e Propriedade Rural</li><li>Desapropriações</li><li>Usucapião Rural</li><li>Questões Fundiárias</li><li>Georreferenciamento</li><li>Cadeia Dominial</li>
-</ul></div>
-<div class="area"><h3>🏛️ DIREITO ADMINISTRATIVO</h3><ul>
-<li>Concurso Público</li><li>Licitações</li><li>Improbidade Administrativa</li><li>Servidores Públicos</li>
-</ul></div>
-<div class="area"><h3>🗳️ DIREITO ELEITORAL</h3><ul>
-<li>Candidaturas</li><li>Propaganda Irregular</li><li>Prestação de Contas</li><li>Inelegibilidade</li>
-</ul></div>
-<div class="area"><h3>🌍 DIREITO INTERNACIONAL</h3><ul>
-<li>Tratados e Convenções</li><li>Direito Internacional Privado</li><li>Casamento e Filiação Internacional</li><li>Migração e Refúgio</li>
-</ul></div>
-<div class="area"><h3>⚕️ DIREITO MÉDICO E DA SAÚDE</h3><ul>
-<li>Erro Médico</li><li>Planos de Saúde</li><li>Direitos do Paciente</li><li>Responsabilidade Hospitalar</li>
-</ul></div>
-<div class="area"><h3>⚽ DIREITO DESPORTIVO</h3><ul>
-<li>Contratos de Atletas</li><li>Transferências Internacionais</li><li>Justiça Desportiva</li>
-</ul></div>
-<div class="area"><h3>🎖️ DIREITO MILITAR</h3><ul>
-<li>Processos Administrativos Militares</li><li>Justiça Militar da União e dos Estados</li><li>Crimes Militares e Disciplinares</li><li>Reintegração e Direitos dos Servidores Militares</li>
-</ul></div>
+
+<section class="secao" id="escritorio">
+  <div class="container sobre" data-revelar>
+    <figure>
+      <img src="img/sala-de-reuniao.jpg" alt="Sala de reunião do escritório, com a marca Grupo Rocha Fernandes no vidro" width="1280" height="853" loading="lazy">
+      <figcaption>Escritório em Santo Amaro, São Paulo.</figcaption>
+    </figure>
+    <div>
+      <p class="rotulo">O escritório</p>
+      <h2>Atuação em todo o território nacional</h2>
+      <p>Demandas consultivas, preventivas e contenciosas, inclusive casos de alta complexidade.</p>
+      <ul class="marcas">
+        <li><svg class="ico" aria-hidden="true"><use href="#i-relogio"/></svg><div><strong>24 horas</strong><span>todos os dias, inclusive fins de semana</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-internacional"/></svg><div><strong>Todo o Brasil</strong><span>26 estados e o Distrito Federal</span></div></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-lista"/></svg><div><strong>19 áreas</strong><span>cada uma com advogado dedicado</span></div></li>
+      </ul>
+    </div>
+  </div>
 </section>
+
+<section class="secao areas" id="areas">
+  <div class="container" data-revelar>
+    <p class="rotulo">Áreas de atuação</p>
+    <div class="intro">
+      <h2>Dezenove áreas do direito</h2>
+      <p>A primeira conversa pelo WhatsApp indica o caminho.</p>
+    </div>
+    <div class="indice">
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-penal"/></svg><div><h3>Direito Penal</h3><p>Defesa criminal e tribunais superiores.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-execucao"/></svg><div><h3>Execução Penal</h3><p>Benefícios e direitos do condenado.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-agrario"/></svg><div><h3>Direito Agrário e Fundiário</h3><p>Propriedades rurais e conflitos fundiários.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-imobiliario"/></svg><div><h3>Direito Imobiliário</h3><p>Usucapião e regularização de imóveis.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-familia"/></svg><div><h3>Direito de Família</h3><p>Divórcio, guarda e disputas patrimoniais.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-empresarial"/></svg><div><h3>Direito Empresarial e Patrimonial</h3><p>Proteção patrimonial e conflitos societários.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-tributario"/></svg><div><h3>Direito Tributário</h3><p>Impostos, execuções fiscais e planejamento.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-digital"/></svg><div><h3>Direito Digital</h3><p>Crimes virtuais, privacidade e proteção de dados.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-ambiental"/></svg><div><h3>Direito Ambiental</h3><p>Licenciamento, crimes ambientais e áreas protegidas.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-administrativo"/></svg><div><h3>Direito Administrativo</h3><p>Licitações, concursos e servidores públicos.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-eleitoral"/></svg><div><h3>Direito Eleitoral</h3><p>Candidaturas, contas e propaganda.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-internacional"/></svg><div><h3>Direito Internacional</h3><p>Tratados, migração e famílias internacionais.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-medico"/></svg><div><h3>Direito Médico e da Saúde</h3><p>Erro médico, planos de saúde e direitos do paciente.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-desportivo"/></svg><div><h3>Direito Desportivo</h3><p>Contratos de atletas e justiça desportiva.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-militar"/></svg><div><h3>Direito Militar</h3><p>Justiça militar e processos disciplinares.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-civil"/></svg><div><h3>Direito Civil</h3><p>Contratos, responsabilidade civil e sucessões.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-trabalhista"/></svg><div><h3>Direito Trabalhista</h3><p>Reclamações, verbas e acidentes de trabalho.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-previdenciario"/></svg><div><h3>Direito Previdenciário</h3><p>Aposentadorias, benefícios e revisões.</p></div></div>
+      <div class="item"><svg class="ico" aria-hidden="true"><use href="#i-consumidor"/></svg><div><h3>Direito do Consumidor</h3><p>Negativação indevida, reembolsos e produtos com defeito.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="como-funciona">
+  <div class="container" data-revelar>
+    <p class="rotulo">Como funciona</p>
+    <h2>Do primeiro contato ao acompanhamento</h2>
+    <div class="rota">
+      <svg class="fio" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M0 1H1000"/></svg>
+      <div class="passo">
+        <span class="no"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></span>
+        <div class="texto"><h3>Você conta o caso</h3><p>Por mensagem ou áudio, a qualquer hora.</p></div>
+      </div>
+      <div class="passo">
+        <span class="no"><svg class="ico" aria-hidden="true"><use href="#i-analise"/></svg></span>
+        <div class="texto"><h3>A equipe analisa</h3><p>O advogado da área responde com os caminhos possíveis.</p></div>
+      </div>
+      <div class="passo">
+        <span class="no"><svg class="ico" aria-hidden="true"><use href="#i-acompanha"/></svg></span>
+        <div class="texto"><h3>O caso segue com um advogado</h3><p>Acompanhamento e atualização a cada etapa.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao onde" id="onde">
+  <div class="container grade" data-revelar>
+    <div>
+      <p class="rotulo">Onde fica</p>
+      <h2>Escritório em Santo Amaro</h2>
+      <p class="endereco">
+        Rua Alexandre Dumas, 1711<br>
+        Santo Amaro, São Paulo, SP<br>
+        CEP 04717-911<br>
+        <a href="tel:+5511920048151">(11) 92004-8151</a>
+      </p>
+      <div class="acoes">
+        <a class="botao" href="https://wa.me/5511920048151" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="botao vazio" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Alexandre+Dumas+1711+Santo+Amaro+S%C3%A3o+Paulo" target="_blank" rel="noopener">Abrir no mapa</a>
+      </div>
+    </div>
+    <iframe title="Mapa do escritório, Rua Alexandre Dumas 1711, Santo Amaro" src="https://www.google.com/maps?q=Rua%20Alexandre%20Dumas%2C%201711%20-%20Santo%20Amaro%2C%20S%C3%A3o%20Paulo&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="secao" id="duvidas">
+  <div class="container duplas" data-revelar>
+    <div class="duvidas">
+      <p class="rotulo">Dúvidas frequentes</p>
+      <h2>Antes de falar com a gente</h2>
+      <details>
+        <summary>Como é o primeiro atendimento?</summary>
+        <p>Pelo WhatsApp, você conta o que aconteceu e envia o que tiver em mãos. A equipe avalia e responde com os próximos passos.</p>
+      </details>
+      <details>
+        <summary>Vocês atendem fora de São Paulo?</summary>
+        <p>Sim. O escritório fica em Santo Amaro, mas a atuação cobre os 26 estados e o Distrito Federal.</p>
+      </details>
+      <details>
+        <summary>Atendem caso urgente, de madrugada ou fim de semana?</summary>
+        <p>Sim. Prisão em flagrante, audiência de custódia e medida urgente são atendidas 24 horas pelo WhatsApp.</p>
+      </details>
+      <details>
+        <summary>O que eu disser fica em sigilo?</summary>
+        <p>Sim. O sigilo profissional é dever do advogado e vale para tudo o que for tratado no atendimento.</p>
+      </details>
+    </div>
+    <aside class="cartao">
+      <p class="rotulo">Primeira conversa</p>
+      <h3>O que ajuda a entender o caso</h3>
+      <ul>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Documento com foto</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Contrato, notificação ou decisão</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Prints de conversa e comprovantes</span></li>
+        <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span>Datas do que aconteceu</span></li>
+      </ul>
+      <a class="botao" href="https://wa.me/5511920048151" target="_blank" rel="noopener">Enviar pelo WhatsApp</a>
+      <p class="nota">Não tem tudo em mãos? A análise indica o que falta.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="plantao">
+  <h2>Atendimento emergencial 24 horas</h2>
+  <p>Prisão em flagrante, audiência de custódia, medida urgente ou prazo que vence hoje. Chame no WhatsApp e fale direto com um advogado.</p>
+  <a class="botao" href="https://wa.me/5511920048151" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+</section>
+
 </main>
-<section class="destaque">
-<h2>ATENDIMENTO JURÍDICO 24 HORAS</h2>
-<p>Atendimento emergencial em todo o território nacional.</p>
-<p><strong>GRUPO ROCHA FERNANDES ADVOGADOS</strong></p>
-<a class="botao" href="https://wa.me/5511920048151" target="_blank" rel="noopener">Fale com nossa equipe pelo WhatsApp</a>
-<p style="margin-top:20px">Telefone: (11) 92004-8151</p>
-</section>
+
 <footer>
-<p><strong>GRUPO ROCHA FERNANDES ADVOGADOS</strong></p>
-<p>Atuação jurídica em todo o Brasil.</p>
-<p>Conteúdo informativo. A contratação de serviços jurídicos depende de análise individualizada do caso.</p>
+  <div class="container">
+    <div>
+      <strong>Grupo Rocha Fernandes Advogados</strong>
+      <p style="margin-top:8px">Rua Alexandre Dumas, 1711 · Santo Amaro, São Paulo<br>(11) 92004-8151</p>
+    </div>
+    <div>
+      <p>Conteúdo informativo, sem oferta de resultado. A contratação de serviços jurídicos depende de análise individualizada de cada caso.</p>
+    </div>
+    <p class="nota">© 2026 Grupo Rocha Fernandes Advogados. Atendimento em todo o território brasileiro, nos 26 estados e no Distrito Federal.</p>
+  </div>
 </footer>
+
+<div class="barra-celular" id="barra-celular">
+  <a href="https://wa.me/5511920048151" target="_blank" rel="noopener">Falar no WhatsApp · (11) 92004-8151</a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduzir = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function aoRolar(){
+    var y = window.scrollY || window.pageYOffset;
+    document.getElementById("cabeca").classList.toggle("compacta", y > 40);
+    document.getElementById("barra-celular").classList.toggle("visivel", y > 520);
+  }
+  window.addEventListener("scroll", aoRolar, {passive:true});
+  aoRolar();
+
+  requestAnimationFrame(function(){ document.body.classList.add("pronto"); });
+
+  var alvos = document.querySelectorAll("[data-revelar]");
+  if (reduzir || !("IntersectionObserver" in window)) {
+    alvos.forEach(function(e){ e.classList.add("visivel"); });
+    return;
+  }
+  var olho = new IntersectionObserver(function(entradas){
+    entradas.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add("visivel"); olho.unobserve(e.target); }
+    });
+  }, {threshold:0.12, rootMargin:"0px 0px -60px 0px"});
+  alvos.forEach(function(e){ olho.observe(e); });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Grupo Rocha Fernandes Advogados",
+  "url": "https://gruporochafernandesadvocacia-hue.github.io/grupo-rocha-fernandes-advogados/",
+  "image": "https://gruporochafernandesadvocacia-hue.github.io/grupo-rocha-fernandes-advogados/img/sala-de-reuniao.jpg",
+  "telephone": "+55-11-92004-8151",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Alexandre Dumas, 1711",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "04717-911",
+    "addressCountry": "BR"
+  },
+  "areaServed": {"@type":"Country","name":"Brasil"},
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "knowsAbout": [
+    "Direito Penal","Execução Penal","Direito Agrário","Direito Imobiliário","Direito de Família",
+    "Direito Empresarial","Direito Tributário","Direito Digital","Direito Ambiental","Direito Administrativo",
+    "Direito Eleitoral","Direito Internacional","Direito Médico","Direito Desportivo","Direito Militar",
+    "Direito Civil","Direito Trabalhista","Direito Previdenciário","Direito do Consumidor"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Como é o primeiro atendimento?","acceptedAnswer":{"@type":"Answer","text":"Pelo WhatsApp, você conta o que aconteceu e envia o que tiver em mãos. A equipe avalia e responde com os próximos passos."}},
+    {"@type":"Question","name":"Vocês atendem fora de São Paulo?","acceptedAnswer":{"@type":"Answer","text":"Sim. O escritório fica em Santo Amaro, mas a atuação cobre os 26 estados e o Distrito Federal."}},
+    {"@type":"Question","name":"Atendem caso urgente, de madrugada ou fim de semana?","acceptedAnswer":{"@type":"Answer","text":"Sim. Prisão em flagrante, audiência de custódia e medida urgente são atendidas 24 horas pelo WhatsApp."}},
+    {"@type":"Question","name":"O que eu disser fica em sigilo?","acceptedAnswer":{"@type":"Answer","text":"Sim. O sigilo profissional é dever do advogado e vale para tudo o que for tratado no atendimento."}}
+  ]
+}
+</script>
 </body>
 </html>
