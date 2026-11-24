@@ -100,9 +100,8 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,3vw,2.4rem)
 .sobre{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
 .sobre figure img{aspect-ratio:4/3;object-fit:cover;filter:saturate(.92)}
 .sobre figcaption{font-size:.82rem;color:var(--texto-fraco);margin-top:10px}
-.equipe{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
-.equipe video{display:block;width:100%;height:auto;max-width:440px;aspect-ratio:4/5;margin:0 auto;background:#17130C;object-fit:cover}
-.equipe .faixa{margin-top:30px}
+.equipe{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.equipe .faixa{margin:0}
 .equipe .faixa img{width:100%;height:auto;display:block}
 .marcas{list-style:none;margin-top:30px;border-top:1px solid rgba(43,38,32,.18)}
 .marcas li{display:grid;grid-template-columns:38px 1fr;column-gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(43,38,32,.18)}
@@ -171,7 +170,7 @@ footer .nota{margin-top:26px;padding-top:20px;border-top:1px solid rgba(231,224,
 
 @media(max-width:860px){
  .sobre,.equipe,.onde .grade,.duplas{grid-template-columns:1fr;gap:34px}
- .equipe video{order:2}
+ .equipe .faixa{order:2}
  .indice{grid-template-columns:1fr}
  .destaques{grid-template-columns:1fr 1fr}
  .hero{padding:130px 0 70px}
@@ -307,9 +306,9 @@ footer .nota{margin-top:26px;padding-top:20px;border-top:1px solid rgba(231,224,
 
 <section class="secao" id="equipe">
   <div class="container equipe" data-revelar>
-    <video controls preload="none" playsinline poster="img/equipe-capa.jpg?v=3" width="576" height="720" aria-label="Vídeo de apresentação do Grupo Rocha Fernandes Advogados">
-      <source src="img/equipe.mp4?v=3" type="video/mp4">
-    </video>
+    <figure class="faixa">
+      <img src="img/escritorios-brasil.jpg?v=4" alt="Temos escritórios em todo o Brasil, atendimento próximo de você. Grupo Rocha Fernandes Advogados" width="1200" height="800" loading="lazy">
+    </figure>
     <div>
       <p class="rotulo">Nossa equipe</p>
       <h2>Advogados perto de você, em todo o Brasil</h2>
@@ -318,9 +317,6 @@ footer .nota{margin-top:26px;padding-top:20px;border-top:1px solid rgba(231,224,
         <li><svg class="ico" aria-hidden="true"><use href="#i-internacional"/></svg><div><strong>Escritórios interligados</strong><span>um aplicativo exclusivo do grupo conecta as equipes</span></div></li>
         <li><svg class="ico" aria-hidden="true"><use href="#i-agrario"/></svg><div><strong>Advogado até você</strong><span>inclusive em área rural</span></div></li>
       </ul>
-      <figure class="faixa">
-        <img src="img/escritorios-brasil.jpg?v=4" alt="Temos escritórios em todo o Brasil, atendimento próximo de você. Grupo Rocha Fernandes Advogados" width="1200" height="800" loading="lazy">
-      </figure>
     </div>
   </div>
 </section>
