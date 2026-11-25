@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://gruporochafernandesadvocacia-hue.github.io/grupo-rocha-fernandes-advogados/sitemap.xml
+Sitemap: https://gruporochafernandes.adv.br/sitemap.xml
